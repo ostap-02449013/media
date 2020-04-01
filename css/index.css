@@ -1,6 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@800&family=Raleway:wght@400;800&display=swap');
 
-h1 {
+:root {
+    font-family: 'Raleway', sans-serif;
+    --main-color: black;
+    --accent-color: white;
+    color: var(--main-color);
+}
+
+body {
+    max-width: 980px;
+    margin: auto;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+header nav h1,
+header .banner .title {
     font-family: 'Baloo Thambi 2', cursive;
     font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header nav .top-menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0;
+}
+
+header nav .top-menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color);
+    border: 1px solid transparent;
+    padding: 5px;
+}
+
+header nav .top-menu li a:hover {
+    border: 1px solid var(--main-color);
+}
+
+@media (min-width: 500px) {
+    
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+
+    header .top-menu {
+        flex: 1;
+    }
+}
+
+header .banner {
+    background-image: url(../img/baby-yoda.jpeg);
+    min-height: 400px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .banner .title {
+    color: var(--accent-color);
+}
+
+@media (min-width: 600px) {
+    header .banner {
+        background-position: top;
+    }
 }
